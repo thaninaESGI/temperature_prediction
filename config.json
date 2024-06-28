@@ -1,0 +1,5 @@
+{
+    "model_path": "./temperature_prediction_model.pkl",
+    "df_path": "./paris_weather_data_4_years.csv",
+    "save_path":"new_data.csv"
+}

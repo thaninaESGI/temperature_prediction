@@ -1,0 +1,132 @@
+[2024-06-28T08:54:10.600+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-28T08:54:10.624+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_data_pipeline.fetch_weather_data manual__2024-06-28T08:54:08.036500+00:00 [queued]>
+[2024-06-28T08:54:10.635+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_data_pipeline.fetch_weather_data manual__2024-06-28T08:54:08.036500+00:00 [queued]>
+[2024-06-28T08:54:10.636+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-28T08:54:10.654+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_weather_data> on 2024-06-28 08:54:08.036500+00:00
+[2024-06-28T08:54:10.661+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=147) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-06-28T08:54:10.663+0000] {standard_task_runner.py:63} INFO - Started process 161 to run task
+[2024-06-28T08:54:10.662+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'weather_data_pipeline', 'fetch_weather_data', 'manual__2024-06-28T08:54:08.036500+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag.py', '--cfg-path', '/tmp/tmpdualbkik']
+[2024-06-28T08:54:10.664+0000] {standard_task_runner.py:91} INFO - Job 43: Subtask fetch_weather_data
+[2024-06-28T08:54:10.712+0000] {task_command.py:426} INFO - Running <TaskInstance: weather_data_pipeline.fetch_weather_data manual__2024-06-28T08:54:08.036500+00:00 [running]> on host 51f570af495a
+[2024-06-28T08:54:10.801+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_data_pipeline' AIRFLOW_CTX_TASK_ID='fetch_weather_data' AIRFLOW_CTX_EXECUTION_DATE='2024-06-28T08:54:08.036500+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-28T08:54:08.036500+00:00'
+[2024-06-28T08:54:10.802+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-28T08:54:10.826+0000] {python.py:237} INFO - Done. Returned value was: ('./data/./paris_weather_data_4_years.csv',                          date  temperature_2m
+0   2024-06-26 00:00:00+00:00       18.108500
+1   2024-06-26 01:00:00+00:00       17.608500
+2   2024-06-26 02:00:00+00:00       17.158500
+3   2024-06-26 03:00:00+00:00       16.958500
+4   2024-06-26 04:00:00+00:00       17.708500
+5   2024-06-26 05:00:00+00:00       19.158500
+6   2024-06-26 06:00:00+00:00       20.658500
+7   2024-06-26 07:00:00+00:00       22.208500
+8   2024-06-26 08:00:00+00:00       24.008501
+9   2024-06-26 09:00:00+00:00       25.608500
+10  2024-06-26 10:00:00+00:00       26.758501
+11  2024-06-26 11:00:00+00:00       27.558500
+12  2024-06-26 12:00:00+00:00       28.458500
+13  2024-06-26 13:00:00+00:00       28.608500
+14  2024-06-26 14:00:00+00:00       28.708500
+15  2024-06-26 15:00:00+00:00       28.758501
+16  2024-06-26 16:00:00+00:00       28.658500
+17  2024-06-26 17:00:00+00:00       27.758501
+18  2024-06-26 18:00:00+00:00       26.458500
+19  2024-06-26 19:00:00+00:00       25.158500
+20  2024-06-26 20:00:00+00:00       24.358500
+21  2024-06-26 21:00:00+00:00       23.358500
+22  2024-06-26 22:00:00+00:00       22.358500
+23  2024-06-26 23:00:00+00:00       21.558500
+24  2024-06-26 00:00:00+00:00       18.108500
+25  2024-06-26 01:00:00+00:00       17.608500
+26  2024-06-26 02:00:00+00:00       17.158501
+27  2024-06-26 03:00:00+00:00       16.958500
+28  2024-06-26 04:00:00+00:00       17.708500
+29  2024-06-26 05:00:00+00:00       19.158501
+30  2024-06-26 06:00:00+00:00       20.658501
+31  2024-06-26 07:00:00+00:00       22.208500
+32  2024-06-26 08:00:00+00:00       24.008501
+33  2024-06-26 09:00:00+00:00       25.608500
+34  2024-06-26 10:00:00+00:00       26.758501
+35  2024-06-26 11:00:00+00:00       27.558500
+36  2024-06-26 12:00:00+00:00       28.458500
+37  2024-06-26 13:00:00+00:00       28.608500
+38  2024-06-26 14:00:00+00:00       28.708500
+39  2024-06-26 15:00:00+00:00       28.758501
+40  2024-06-26 16:00:00+00:00       28.658501
+41  2024-06-26 17:00:00+00:00       27.758501
+42  2024-06-26 18:00:00+00:00       26.458500
+43  2024-06-26 19:00:00+00:00       25.158501
+44  2024-06-26 20:00:00+00:00       24.358500
+45  2024-06-26 21:00:00+00:00       23.358500
+46  2024-06-26 22:00:00+00:00       22.358500
+47  2024-06-26 23:00:00+00:00       21.558500)
+[2024-06-28T08:54:10.837+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-28T08:54:10.856+0000] {xcom.py:675} ERROR - Object of type tuple is not JSON serializable. If you are using pickle instead of JSON for XCom, then you need to enable pickle support for XCom in your *** config or make sure to decorate your object with attr.
+[2024-06-28T08:54:10.857+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 91, in default
+    return serialize(o)
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serde.py", line 150, in serialize
+    return encode(classname or serialized_classname, version, serialize(data, depth + 1))
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serde.py", line 127, in serialize
+    return [serialize(d, depth + 1) for d in o]
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serde.py", line 148, in serialize
+    data, serialized_classname, version, is_serialized = _serializers[qn].serialize(o)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serializers/pandas.py", line 49, in serialize
+    table = pa.Table.from_pandas(o)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/table.pxi", line 4525, in pyarrow.lib.Table.from_pandas
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 611, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 598, in convert_column
+    raise e
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 592, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/array.pxi", line 345, in pyarrow.lib.array
+  File "pyarrow/array.pxi", line 85, in pyarrow.lib._ndarray_to_array
+  File "pyarrow/error.pxi", line 91, in pyarrow.lib.check_status
+pyarrow.lib.ArrowTypeError: ("Expected bytes, got a 'Timestamp' object", 'Conversion failed for column date with type object')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 486, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3197, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 246, in set
+    value = cls.serialize_value(
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 673, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 102, in encode
+    o = self.default(o)
+        ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 93, in default
+    return super().default(o)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type tuple is not JSON serializable
+[2024-06-28T08:54:10.867+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=weather_data_pipeline, task_id=fetch_weather_data, run_id=manual__2024-06-28T08:54:08.036500+00:00, execution_date=20240628T085408, start_date=20240628T085410, end_date=20240628T085410
+[2024-06-28T08:54:10.878+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 43 for task fetch_weather_data (Object of type tuple is not JSON serializable; 161)
+[2024-06-28T08:54:10.918+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-06-28T08:54:10.938+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-28T08:54:10.944+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

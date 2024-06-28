@@ -1,0 +1,44 @@
+[2024-06-28T10:22:52.912+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-28T10:22:53.069+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_data_pipeline.fetch_weather_data manual__2024-06-28T10:22:47.454922+00:00 [queued]>
+[2024-06-28T10:22:53.080+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_data_pipeline.fetch_weather_data manual__2024-06-28T10:22:47.454922+00:00 [queued]>
+[2024-06-28T10:22:53.081+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-28T10:22:53.099+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_weather_data> on 2024-06-28 10:22:47.454922+00:00
+[2024-06-28T10:22:53.107+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=66) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-06-28T10:22:53.109+0000] {standard_task_runner.py:63} INFO - Started process 87 to run task
+[2024-06-28T10:22:53.110+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'weather_data_pipeline', 'fetch_weather_data', 'manual__2024-06-28T10:22:47.454922+00:00', '--job-id', '94', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag.py', '--cfg-path', '/tmp/tmp1grgy_b2']
+[2024-06-28T10:22:53.111+0000] {standard_task_runner.py:91} INFO - Job 94: Subtask fetch_weather_data
+[2024-06-28T10:22:53.154+0000] {task_command.py:426} INFO - Running <TaskInstance: weather_data_pipeline.fetch_weather_data manual__2024-06-28T10:22:47.454922+00:00 [running]> on host 3691a34eba99
+[2024-06-28T10:22:53.249+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_data_pipeline' AIRFLOW_CTX_TASK_ID='fetch_weather_data' AIRFLOW_CTX_EXECUTION_DATE='2024-06-28T10:22:47.454922+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-28T10:22:47.454922+00:00'
+[2024-06-28T10:22:53.250+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-28T10:22:53.436+0000] {python.py:237} INFO - Done. Returned value was:                         date  temperature_2m
+0  2024-06-26 00:00:00+00:00       18.108500
+1  2024-06-26 01:00:00+00:00       17.608500
+2  2024-06-26 02:00:00+00:00       17.158501
+3  2024-06-26 03:00:00+00:00       16.958500
+4  2024-06-26 04:00:00+00:00       17.708500
+5  2024-06-26 05:00:00+00:00       19.158501
+6  2024-06-26 06:00:00+00:00       20.658501
+7  2024-06-26 07:00:00+00:00       22.208500
+8  2024-06-26 08:00:00+00:00       24.008501
+9  2024-06-26 09:00:00+00:00       25.608500
+10 2024-06-26 10:00:00+00:00       26.758501
+11 2024-06-26 11:00:00+00:00       27.558500
+12 2024-06-26 12:00:00+00:00       28.458500
+13 2024-06-26 13:00:00+00:00       28.608500
+14 2024-06-26 14:00:00+00:00       28.708500
+15 2024-06-26 15:00:00+00:00       28.758501
+16 2024-06-26 16:00:00+00:00       28.658501
+17 2024-06-26 17:00:00+00:00       27.758501
+18 2024-06-26 18:00:00+00:00       26.458500
+19 2024-06-26 19:00:00+00:00       25.158501
+20 2024-06-26 20:00:00+00:00       24.358500
+21 2024-06-26 21:00:00+00:00       23.358500
+22 2024-06-26 22:00:00+00:00       22.358500
+23 2024-06-26 23:00:00+00:00       21.558500
+[2024-06-28T10:22:53.449+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-28T10:22:53.520+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=weather_data_pipeline, task_id=fetch_weather_data, run_id=manual__2024-06-28T10:22:47.454922+00:00, execution_date=20240628T102247, start_date=20240628T102253, end_date=20240628T102253
+[2024-06-28T10:22:53.565+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-28T10:22:53.588+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-28T10:22:53.597+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

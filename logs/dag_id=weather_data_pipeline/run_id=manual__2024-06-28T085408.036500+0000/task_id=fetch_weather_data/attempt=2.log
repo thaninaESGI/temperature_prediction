@@ -1,0 +1,44 @@
+[2024-06-28T09:02:37.627+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-28T09:02:37.793+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_data_pipeline.fetch_weather_data manual__2024-06-28T08:54:08.036500+00:00 [queued]>
+[2024-06-28T09:02:37.801+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_data_pipeline.fetch_weather_data manual__2024-06-28T08:54:08.036500+00:00 [queued]>
+[2024-06-28T09:02:37.802+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-06-28T09:02:37.822+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_weather_data> on 2024-06-28 08:54:08.036500+00:00
+[2024-06-28T09:02:37.830+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=67) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-06-28T09:02:37.831+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'weather_data_pipeline', 'fetch_weather_data', 'manual__2024-06-28T08:54:08.036500+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag.py', '--cfg-path', '/tmp/tmpb1_0q2wm']
+[2024-06-28T09:02:37.832+0000] {standard_task_runner.py:63} INFO - Started process 109 to run task
+[2024-06-28T09:02:37.833+0000] {standard_task_runner.py:91} INFO - Job 51: Subtask fetch_weather_data
+[2024-06-28T09:02:37.882+0000] {task_command.py:426} INFO - Running <TaskInstance: weather_data_pipeline.fetch_weather_data manual__2024-06-28T08:54:08.036500+00:00 [running]> on host 3fa31e46ca5c
+[2024-06-28T09:02:37.997+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_data_pipeline' AIRFLOW_CTX_TASK_ID='fetch_weather_data' AIRFLOW_CTX_EXECUTION_DATE='2024-06-28T08:54:08.036500+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-28T08:54:08.036500+00:00'
+[2024-06-28T09:02:37.998+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-28T09:02:38.202+0000] {python.py:237} INFO - Done. Returned value was: ('./data/./paris_weather_data_4_years.csv',                         date  temperature_2m
+0  2024-06-26 00:00:00+00:00       18.108500
+1  2024-06-26 01:00:00+00:00       17.608500
+2  2024-06-26 02:00:00+00:00       17.158501
+3  2024-06-26 03:00:00+00:00       16.958500
+4  2024-06-26 04:00:00+00:00       17.708500
+5  2024-06-26 05:00:00+00:00       19.158501
+6  2024-06-26 06:00:00+00:00       20.658501
+7  2024-06-26 07:00:00+00:00       22.208500
+8  2024-06-26 08:00:00+00:00       24.008501
+9  2024-06-26 09:00:00+00:00       25.608500
+10 2024-06-26 10:00:00+00:00       26.758501
+11 2024-06-26 11:00:00+00:00       27.558500
+12 2024-06-26 12:00:00+00:00       28.458500
+13 2024-06-26 13:00:00+00:00       28.608500
+14 2024-06-26 14:00:00+00:00       28.708500
+15 2024-06-26 15:00:00+00:00       28.758501
+16 2024-06-26 16:00:00+00:00       28.658501
+17 2024-06-26 17:00:00+00:00       27.758501
+18 2024-06-26 18:00:00+00:00       26.458500
+19 2024-06-26 19:00:00+00:00       25.158501
+20 2024-06-26 20:00:00+00:00       24.358500
+21 2024-06-26 21:00:00+00:00       23.358500
+22 2024-06-26 22:00:00+00:00       22.358500
+23 2024-06-26 23:00:00+00:00       21.558500)
+[2024-06-28T09:02:38.215+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-28T09:02:38.275+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=weather_data_pipeline, task_id=fetch_weather_data, run_id=manual__2024-06-28T08:54:08.036500+00:00, execution_date=20240628T085408, start_date=20240628T090237, end_date=20240628T090238
+[2024-06-28T09:02:38.328+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-28T09:02:38.355+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-28T09:02:38.360+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,11 @@
+Flask
+Werkzeug
+requests
+joblib
+scikit-learn
+pandas
+numpy
+scikit-learn
+openmeteo-requests==1.2.0 
+requests-cache
+retry-requests
